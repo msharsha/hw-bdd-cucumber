@@ -22,6 +22,7 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
   Then 10 seed movies should exist
 
+#Scenario definitions are listed below
 Scenario: restrict to movies with 'PG' or 'R' ratings
   When I check the following ratings: PG, R
   And I uncheck the following ratings: G, PG-13

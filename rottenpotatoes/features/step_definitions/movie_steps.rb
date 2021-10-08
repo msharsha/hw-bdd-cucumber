@@ -46,8 +46,9 @@ Then /I should see all the movies/ do
   expect(rows).to eq Movie.count
 end
 
+
+# New step defintions have been added
 Then /I should see the movies : (.*)/ do |movie_list|
-  # pending # Write code here that turns the phrase above into concrete actions
   movies = movie_list.split(', ')
   for movie in movies
       step "I should see " + movie
@@ -55,7 +56,6 @@ Then /I should see the movies : (.*)/ do |movie_list|
 end
 
 Then /I should not see the movies : (.*)/ do |movie_list|
-  # pending # Write code here that turns the phrase above into concrete actions
   movies = movie_list.split(', ')
   for movie in movies
       step "I should not see " + movie
